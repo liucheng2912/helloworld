@@ -1,14 +1,25 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
+
 import sys
 
-i = int(len(sys.argv))
+output_dict = {}
 
-dict1 = {}
-for i in sys.argv[1:]:
-     a,b= i.split(':')
-     dict1[a] = b
+def handle_data(a):
+   b,c =  a.split(":")
+   output_dict[b] = c
+   
 
-for key,value in dict1.items():
-   print('ID:{} Name:{}'.format(key,value))
+def print_data(a,b):
+   print('ID:{}Name:{}'.format(a,b))
+    
+if __name__ == '__main__':
+   
+  for arg in sys.argv[1:]:
+      handle_data(arg)
+  
+  for key in output_dict:
+      print_data(key,output_dict[key])
 
+
+ 
