@@ -1,0 +1,28 @@
+@Feature    功能名称
+@story  子功能名称
+@step   步骤细节
+@attach     具体文本信息 需要附加的信息 可以是数据、文本、图片、视频、网页
+限制运行某个功能
+    pytest 文件名 --allure-feature ‘购物车功能’ --allure-stories '加入购物车' -vs  --alluredir=./result
+    vs 表示显示详细信息
+    上面一条会运行购物车功能和加入购物车两个测试用例
+    --alluredir 用来控制生成文件的路径
+    最后运行 allure serve ./result 将result里的测试结果生成测试报告
+
+    allure generate ./result2 -o report2  --clean
+        指定在report2中生成
+        clean 用来清除原来的文件
+     allure open -h 127.0.0.1 -p 8883 ./report2/
+        别人可以通过访问127.0.0.1:8883/report2/ 查看到测试报告
+
+重要性级别
+    附加pytest.mark 标记
+    通过allure.feature allure.story
+    通过allure.severity来附加标记
+        Trivial 不重要
+        Minor 不太重要
+        Normal 正常问题
+        Critical 严重
+        Blocker 阻塞
+            在方法和函数和类上面加 @allure.severity(allure.severity_level.TRIVIAL)
+            执行时 pytest -s -v 文件名 --allure-severities normal,critical

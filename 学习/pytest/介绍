@@ -1,0 +1,11 @@
+测试文件
+    test_*.py   test开头
+    *_test.py   test结尾
+
+用例识别
+    类 Test*     Test开头 首字母大写
+    类中包含的方法都要 test_* 的方法  需要test_开头
+    类不能包含 __init__方法
+    不在类中的所有test_*方法 也可以被执行
+    
+pytest也可以执行unittest框架写的用例和方法
