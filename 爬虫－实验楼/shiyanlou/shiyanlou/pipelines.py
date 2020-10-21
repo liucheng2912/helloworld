@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-import scrapy
 from datetime import datetime
 from sqlalchemy.orm import sessionmaker
-from shiyanlou.items import CourseItem,UserItem
-from shiyanlou.models import Course,engine,User
+from others.shiyanlou import CourseItem
+from others.shiyanlou import Course,engine,User
 # Define your item pipelines here
 #
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting

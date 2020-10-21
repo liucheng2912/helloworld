@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
-import scrapy
 from datetime import datetime
-from shiyanlou.items import ShiyanlouItem
-from shiyanlou.models import engine,Repository
+from others.shiyanlou import engine,Repository
 from sqlalchemy.orm import sessionmaker
 # Define your item pipelines here
 #

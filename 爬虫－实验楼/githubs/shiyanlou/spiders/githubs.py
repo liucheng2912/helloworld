@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from shiyanlou.items import ShiyanlouItem 
+from others.shiyanlou import ShiyanlouItem
 
 class GithubsSpider(scrapy.Spider):
     name = 'githubs'

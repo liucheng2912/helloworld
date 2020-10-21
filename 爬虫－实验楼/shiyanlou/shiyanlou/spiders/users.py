@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import scrapy
-from shiyanlou.items import UserItem
+from others.shiyanlou import UserItem
 
 class UsersSpider(scrapy.Spider):
     name = 'users'
